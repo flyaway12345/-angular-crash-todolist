@@ -1,0 +1,18 @@
+<div class="container">
+<div class="form-group"[ngClass]="setClasses()">
+  <p>
+    
+    <input class="form-control form-check-label"
+      (change)="onToggle(todo)"
+      type="checkbox"
+      id="{{ todo.id }}"
+      [checked]="todo.completed"
+    />
+    <label class="form-check-label" for="{{ todo.id }}">
+      {{ todo.title }}
+    </label>
+    <button (click)="onDelete(todo)" class="del btn btn-danger">X</button>
+ 
+  </p>
+</div>
+</div>
